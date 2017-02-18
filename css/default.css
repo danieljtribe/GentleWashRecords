@@ -1,0 +1,65 @@
+body {
+	font-family: 'SimHei', 'STHeiti', sans-serif;
+	font-weight: normal;
+	color: #ffffff;
+	height:100%;
+	text-rendering: optimizeLegibility;
+}
+
+.container-fluid {
+    height:100%;
+	background-color: #ffffff;
+}
+
+.container-image {
+	background: url('../assets/cover.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	height:100%;
+	background-position: center 49.9%;
+	background-repeat: no-repeat;
+}
+
+.container-grid {
+	background-color: #ffffff;
+	height:100%;
+}
+
+.container-demopolicy {
+	background-color: #f0f4f5;
+	height:100%;
+}
+
+.header-overlay {
+	background: rgb(0, 0, 0); /* Fallback for older browsers without RGBA-support */
+    background: rgba(0, 0, 0, 0.5);
+	height:100%;
+}
+
+.text-overlay {
+	height:100%;
+}
+
+.text-centered {
+	text-align: center;
+}
+
+.centered-content {
+	position: absolute;
+	top: 30%;
+	width: 100%;
+}
+
+.article-content {
+	background-color: #ffffff;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}

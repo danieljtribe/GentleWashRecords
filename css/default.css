@@ -1,3 +1,11 @@
+@media only screen and (max-width: 480px) {
+	.centered-content {
+		position: absolute;
+		top: 5%;
+		width: 100%;
+	}
+}
+
 body {
 	font-family: 'SimHei', 'STHeiti', sans-serif;
 	font-weight: normal;
@@ -9,17 +17,8 @@ body {
 .container-fluid {
   height:100%;
 	background-color: #ffffff;
-}
-
-.container-image {
-	background: url('../assets/cover.jpg') no-repeat center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
-	height:100%;
-	background-position: center 49.9%;
-	background-repeat: no-repeat;
+	padding-right: 0px;
+	padding-left: 0px;
 }
 
 .container-grid {
@@ -34,7 +33,7 @@ body {
 
 .header-overlay {
 	background: rgb(0, 0, 0); /* Fallback for older browsers without RGBA-support */
-    background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 	height:100%;
 }
 
@@ -59,7 +58,93 @@ body {
 	padding: 20px;
 }
 
+.menu-options {
+	margin-top: 150px;
+}
+
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
+}
+
+/* Menu in non-sticky state */
+.menu {
+    position: absolute;
+    bottom: 10px;
+		width: 100%;
+		text-align: center;
+		z-index: 100;
+}
+
+.menu a:link {
+	color: #ffffff;
+}
+.menu a:hover {
+	color: #ffffff;
+}
+.menu a:visited {
+	color: #ffffff;
+}
+.menu a:active {
+	color: #ffffff;
+}
+
+.sticky {
+    position:fixed;
+    top:0;
+		width: 100%;
+}
+
+.sticky a:link {
+	color: #6e9ec7;
+}
+.sticky a:hover {
+	color: #6e9ec7;
+}
+.sticky a:visited {
+	color: #6e9ec7;
+}
+.sticky a:active {
+	color: #6e9ec7;
+}
+
+ /* Phone */
+@media only screen and (min-width: 480px) {
+	.container-image {
+		background: url('../assets/cover.jpg') no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		-o-background-size: cover;
+		height:100%;
+		background-position: center 49.9%;
+		background-repeat: no-repeat;
+	}
+	.row {
+		min-height: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+ /* Tablet */
+@media only screen and (min-width: 768px) {
+	.container-image {
+		background: url('../assets/cover.jpg') no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		-o-background-size: cover;
+		height:100%;
+		background-position: center 49.9%;
+		background-repeat: no-repeat;
+	}
+	.row {
+		min-height: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }

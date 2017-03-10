@@ -21,12 +21,6 @@ a:active {
 	padding-right: 40px;
 }
 
-.description h1 {
-	font-size: 108px;
-	color: #ffffff;
-	font-family: 'SimHei', 'STHeiti', sans-serif;
-}
-
 .description h3 {
 	font-size: 20px;
 	line-height: 1.5;
@@ -35,21 +29,35 @@ a:active {
 	font-family: 'SimHei', 'STHeiti', sans-serif;
 }
 
-.demo-policy {
+.article-text {
+  text-align: center;
 	padding-left: 50px;
 	padding-right: 50px;
 }
 
-.demo-policy {
+.article-text {
 	font-family: Montserrat, sans-serif;
 }
 
-.demo-policy h2 {
+.row h2 {
 	font-size: 50px;
-	font-weight: 500;
+	font-weight: bolder;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.demo-policy h2 a {
-	font-size: 50px;
-	font-weight: 500;
+@media only screen and (min-width: 480px) {
+  .description h1 {
+  	font-size: 30px;
+  	color: #ffffff;
+  	font-family: 'SimHei', 'STHeiti', sans-serif;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .description h1 {
+  	font-size: 108px;
+  	color: #ffffff;
+  	font-family: 'SimHei', 'STHeiti', sans-serif;
+  }
 }

@@ -12,39 +12,44 @@
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
 		<link rel="stylesheet" type="text/css" href="css/cards.css" />
 
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script src="js/jssor.slider-22.2.8.mini.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+		<script src="js/jquery.panelSnap.js"></script>
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
-		<script src="js/jssor.slider-22.2.16.mini.js" type="text/javascript"></script>
 		<style>
-				.jssora08l, .jssora08r {
-						display: block;
-						position: absolute;
-						/* size of arrow element */
-						width: 50px;
-						height: 50px;
-						cursor: pointer;
-						background: url('img/a08.png') no-repeat;
-						overflow: hidden;
-						opacity: .4;
-						filter: alpha(opacity=40);
-				}
-				.jssora08l { background-position: -5px -35px; }
-				.jssora08r { background-position: -65px -35px; }
-				.jssora08l:hover { background-position: -5px -35px; opacity: .8; filter:alpha(opacity=80); }
-				.jssora08r:hover { background-position: -65px -35px; opacity: .8; filter:alpha(opacity=80); }
-				.jssora08l.jssora08ldn { background-position: -5px -35px; opacity: .3; filter:alpha(opacity=30); }
-				.jssora08r.jssora08rdn { background-position: -65px -35px; opacity: .3; filter:alpha(opacity=30); }
-				.jssora08l.jssora08lds { background-position: -5px -35px; opacity: .3; pointer-events: none; }
-				.jssora08r.jssora08rds { background-position: -65px -35px; opacity: .3; pointer-events: none; }
-		</style>
+      @import url(http://fonts.googleapis.com/css?family=Lato:100);
+
+      @media screen and (max-width: 768px) {
+        body {
+          font-size: 16px;
+        }
+      }
+
+      .panels,
+      .log,
+      pre {
+        position: absolute;
+        top: 100px;
+        bottom: 100px;
+        right: 100px;
+        left: 100px;
+        overflow: hidden;
+      }
+
+      .button.disabled {
+        background: #7f8c8d;
+      }
+
+			.articles {
+				background-color: #c0c0c0;
+			}
+    </style>
 	</head>
 	<body>
+		<section>
 		<!-- Begin header -->
 		<div style="GREY AREA">
 
@@ -65,120 +70,40 @@
 								</div>
 							</div>
 						</div>
-						<div class="menu">
-						 <span><a href="#" id="a-artists" onclick="scrollToObjectAndShowTab($('#articles'), 1);">Artists</a></span> |
-						 <span><a href="#" id="a-albums" onclick="scrollToObjectAndShowTab($('#articles'), 2);">Albums</a></span> |
-						 <span><a href="#" id="a-demo" onclick="scrollToObjectAndShowTab($('#articles'), 3);">Demo Policy</a></span>
+					<!--	<div class="menu">
+						 <span><a href="#" id="a-artists" data-panel="artists" onclick="scrollToObjectAndShowTab($('#articles'), 1);">Artists</a></span> |
+						 <span><a href="#" id="a-albums" data-panel="albums" onclick="scrollToObjectAndShowTab($('#articles'), 2);">Albums</a></span> |
+						 <span><a href="#" id="a-demo" data-panel="demopolicy" onclick="scrollToObjectAndShowTab($('#articles'), 3);">Demo Policy</a></span>
+					 </div> -->
+					 <div class="menu">
+						 <a href="" onclick="scrollToObjectAndShowTab($('#articles'), 0);" data-panel="first" class="active">
+							 Albums
+						 </a> |
+						 <a href="" onclick="scrollToObjectAndShowTab($('#articles'), 0);" data-panel="second">
+							 Artists
+						 </a> |
+						 <a href="" onclick="scrollToObjectAndShowTab($('#articles'), 0);" data-panel="third">
+							 Demo Policy
+						 </a>
 					 </div>
 					</div>
 			</div>
 			<!-- End header -->
-			<!-- Begin articles -->
-			<div id="articles" class="container-fluid container-grid" style="background-color: #F1F2F3; padding: 40px;">
-				<div id="jssor_1" style="position:relative;margin:0;top:0px;left:0px;width:100%;height:100%;visibility:hidden;">
-
-				<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:700px;overflow:hidden;background-color: #ffffff;">
-
-					<div id="artists" style="padding: 10 100 10 100;" class="row article">
-						<div class="col-sm-12">
-							<h2>Artists</h2>
-						</div>
-						<div class="col-sm-12">
-							<div class="row">
-								<div class="col-md-6">
-											<div class="card">
-												<div class="card-image">
-													<img src="assets/sample-1.jpg">
-													<span class="card-title">Artist 1</span>
-												</div>
-												<div class="card-content">
-													<p>This is some descriptive text about this artist. Lots more text may be added, like this... and this too.</p>
-												</div>
-												<div class="card-action">
-													<a href="#">This is a link</a>
-												</div>
-											</div>
-								</div>
-								<div class="col-md-6">
-											<div class="card">
-												<div class="card-image">
-													<img src="assets/sample-1.jpg">
-													<span class="card-title">Artist 2</span>
-												</div>
-												<div class="card-content">
-													<p>This is some descriptive text about this artist. Lots more text may be added, like this... and this too.</p>
-												</div>
-												<div class="card-action">
-													<a href="#">This is a link</a>
-												</div>
-											</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="albums" style="padding: 10 100 10 100;" class="row article">
-						<div class="col-sm-12">
-							<h2>Albums</h2>
-						</div>
-						<div class="col-sm-12">
-							<div class="row">
-								<div class="col-md-4">
-											<div class="card album">
-												<div class="card-image">
-													<img src="assets/sample-1.jpg">
-												</div>
-												<div class="card-content">
-													<span class="card-title">Album 1</span>
-													<p>2016</p>
-												</div>
-												<div class="card-action">
-													<a href="#">Preview</a>
-												</div>
-											</div>
-								</div>
-								<div class="col-md-4">
-											<div class="card album">
-												<div class="card-image">
-													<img src="assets/sample-1.jpg">
-												</div>
-												<div class="card-content">
-													<span class="card-title">Album 2</span>
-													<p>2016</p>
-												</div>
-												<div class="card-action">
-													<a href="#">Preview</a>
-												</div>
-											</div>
-								</div>
-								<div class="col-md-4">
-											<div class="card album">
-												<div class="card-image">
-													<img src="assets/sample-1.jpg">
-												</div>
-												<div class="card-content">
-													<span class="card-title">Album 3</span>
-													<p>2016</p>
-												</div>
-												<div class="card-action">
-													<a href="#">Preview</a>
-												</div>
-											</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="demo" style="padding: 10 100 10 100;" class="row article">
-						<div class="text-post-wrap">
-							<h2><a href="http://gentlewashrecords.com/post/154074410252/demo" title="Demo Policy">Demo Policy</a></h2>
-							<p>Gentle Wash Records is a vanity label to release my own music and will never be anything more than that. I neither have the resources nor the will to run a proper label.</p>
-							<p>Having said that, I know the feeling of thousands bounced emails and the struggle you may be in right now&hellip; I ended up self publishing and relying on an <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fstate51.com%2F&amp;t=ZjQyMWVkMWQzMjMyZjY0NmYwN2ViOWM5MWE4NGQ4M2E4MzNiNTQzYSxvZm92bkc5bg%3D%3D&amp;b=t%3AMjiKEK_-mJzPOxYZJyz2HQ&amp;p=http%3A%2F%2Fgentlewashrecords.com%2Fpost%2F154074410252%2Fdemo&amp;m=1" target="_blank">aggregator</a>.</p>
-							<p>Keep looking. I'm sure that one day your music will be heard where it belongs.</p><p>Sonic regards.</p>
-						</div>
-					</div>
-				</div>
-				<!-- End Articles -->
+		</section>
+		<section id="articles">
+			<div class="panels">
+				<section data-panel="first">
+					<h1>Albums</h1>
+				</section>
+				<section data-panel="second">
+					<h1>Artists</h1>
+				</section>
+				<section data-panel="third">
+					<h1>Demo Policy</h1>
+				</section>
 			</div>
-		</div>
+		</section>
+
 		<!-- Begin Social footer -->
 		<footer class="footer" style="">
 			<a href="#top" class="scroll-top"><i class="social-up">^</i></a>
@@ -189,8 +114,6 @@
 		<!-- End Social footer -->
 
 		<script>
-		var jssor_1_slider;
-
 		jQuery(document).ready(function ($) {
 			// Menu stickyness
 			var menu = $('.menu');
@@ -207,37 +130,9 @@
 			}
 			document.onscroll = scroll;
 
-				var jssor_1_options = {
-					$AutoPlay: false,
-					$DragOrientation: 2,
-					$PlayOrientation: 2,
-					$SlideDuration: 1024,
-					$SlideEasing: $Jease$.$OutQuint,
-					$ArrowNavigatorOptions: {
-						$Class: $JssorArrowNavigator$
-					},
-					$BulletNavigatorOptions: {
-						$Class: $JssorBulletNavigator$
-					}
-				};
-
-				jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-				//responsive code begin
-				//you can remove responsive code if you don't want the slider scales while window resizes
-				function ScaleSlider() {
-				    var parentWidth = jssor_1_slider.$Elmt.parentNode.clientWidth;
-				    if (parentWidth)
-				        jssor_1_slider.$ScaleWidth(Math.min(parentWidth, 100));
-				    else
-				        window.setTimeout(ScaleSlider, 30);
-				}
-				ScaleSlider();
-
-				$(window).bind("load", ScaleSlider);
-				$(window).bind("resize", ScaleSlider);
-				$(window).bind("orientationchange", ScaleSlider);
-				//responsive code end
+			$('.panels').panelSnap({
+				$menu: $('.menu')
+			});
 		});
 
 		function scrollToObjectAndShowTab(object, tab) {
@@ -245,7 +140,7 @@
 			$('html, body').animate({
 					scrollTop: object.offset().top
 			}, 500);
-			jssor_1_slider.$PlayTo(tab);
+			//jssor_1_slider.$PlayTo(tab);
 		}
 </script>
 	</body>

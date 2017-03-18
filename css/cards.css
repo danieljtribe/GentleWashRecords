@@ -46,11 +46,19 @@
 	display:block;
 }
 
-img {
-	border:0;
-
-	/* allow javascript moves the img position*/
-	position:absolute;
+.zitem .info {
+  width:175px;
+  height:175px;
+  /* opacity setting */
+  filter:alpha(opacity=100);    /* ie  */
+  -moz-opacity:1.0;    /* old mozilla browser like netscape  */
+  -khtml-opacity: 1.0;    /* for really really old safari */
+  opacity: 1.0;    /* css standard, currently it works in most modern browsers like firefox,  */
+  padding: 20%;
+  position: relative;
+  top: -175px;
+  /* hide it by default */
+  display:none;
 }
 
 .clear {

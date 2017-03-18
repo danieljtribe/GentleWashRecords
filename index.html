@@ -32,10 +32,10 @@
       .log,
       pre {
         position: absolute;
-        top: 100px;
-        bottom: 100px;
-        right: 100px;
-        left: 100px;
+        top: 60px;
+        bottom: 60px;
+        right: 60px;
+        left: 60px;
         overflow: hidden;
       }
 
@@ -51,8 +51,6 @@
 	<body>
 		<section>
 		<!-- Begin header -->
-		<div style="GREY AREA">
-
 			<div class="container-fluid container-image">
 					<div class="row row-centered cover header-overlay">
 						<div class="col-xs-12 col-md-12 col-lg-12 col-centered text-centered text-overlay">
@@ -91,16 +89,20 @@
 			<!-- End header -->
 		</section>
 		<section id="articles">
-			<div class="panels">
-				<section data-panel="first">
-					<h1>Albums</h1>
-				</section>
-				<section data-panel="second">
-					<h1>Artists</h1>
-				</section>
-				<section data-panel="third">
-					<h1>Demo Policy</h1>
-				</section>
+			<div style="background-color: rgb(250, 250, 250);" class="container-fluid">
+				<div class="row">
+					<div style="background-color: #ffffff;" class="panels">
+						<section style="height: 100%;" data-panel="first">
+							<h1>Albums</h1>
+						</section>
+						<section style="height: 100%;" data-panel="second">
+							<h1>Artists</h1>
+						</section>
+						<section style="height: 100%;" data-panel="third">
+							<h1>Demo Policy</h1>
+						</section>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -114,34 +116,34 @@
 		<!-- End Social footer -->
 
 		<script>
-		jQuery(document).ready(function ($) {
-			// Menu stickyness
-			var menu = $('.menu');
-			var origOffsetY = menu.offset().top;
+			jQuery(document).ready(function ($) {
+				// Menu stickyness
+				var menu = $('.menu');
+				var origOffsetY = menu.offset().top;
 
-			function scroll() {
-					if ($(window).scrollTop() >= origOffsetY) {
-							$('.menu').addClass('sticky');
-							$('.content').addClass('menu-padding');
-					} else {
-							$('.menu').removeClass('sticky');
-							$('.content').removeClass('menu-padding');
-					}
-			}
-			document.onscroll = scroll;
+				function scroll() {
+						if ($(window).scrollTop() >= origOffsetY) {
+								$('.menu').addClass('sticky');
+								$('.content').addClass('menu-padding');
+						} else {
+								$('.menu').removeClass('sticky');
+								$('.content').removeClass('menu-padding');
+						}
+				}
+				document.onscroll = scroll;
 
-			$('.panels').panelSnap({
-				$menu: $('.menu')
+				$('.panels').panelSnap({
+					$menu: $('.menu')
+				});
 			});
-		});
 
-		function scrollToObjectAndShowTab(object, tab) {
-			event.preventDefault();
-			$('html, body').animate({
-					scrollTop: object.offset().top
-			}, 500);
-			//jssor_1_slider.$PlayTo(tab);
-		}
-</script>
+			function scrollToObjectAndShowTab(object, tab) {
+				event.preventDefault();
+				$('html, body').animate({
+						scrollTop: object.offset().top
+				}, 500);
+				//jssor_1_slider.$PlayTo(tab);
+			}
+		</script>
 	</body>
 </html>

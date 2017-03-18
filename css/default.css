@@ -151,6 +151,9 @@ body {
 	color: #6e9ec7;
 }
 
-.album {
-	background-color: #000000;
+.section-panel {
+	height: 100%;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 10%;
 }

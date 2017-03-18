@@ -54,7 +54,7 @@
   -moz-opacity:1.0;    /* old mozilla browser like netscape  */
   -khtml-opacity: 1.0;    /* for really really old safari */
   opacity: 1.0;    /* css standard, currently it works in most modern browsers like firefox,  */
-  padding: 20%;
+  padding: 30%;
   position: relative;
   top: -175px;
   /* hide it by default */

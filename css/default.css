@@ -133,7 +133,7 @@ body {
 
 .sticky {
     position:fixed;
-    top:15px;
+    top:0px;
 		width: 100%;
 		color: #6e9ec7;
 }

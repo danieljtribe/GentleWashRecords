@@ -96,6 +96,32 @@
 							<div style="text-align: center; vertical-align: middle;" class="text-post-wrap">
 								<h2><a href="" title="Albums">Albums</a></h2>
 
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-md-6 col-lg-6">
+
+											<div class="zitem">
+												<a href="#"><img src="assets/albumcovers/aner_andros.jpeg" alt="Aner Andros" title="" width="250" height="250"/></a>
+												<div class="caption">
+													<a href="">Aner Andros</a>
+												</div>
+											</div>
+											<div class="clear"></div>
+
+										</div>
+										<div class="col-xs-12 col-md-6 col-lg-6">
+
+											<div class="zitem">
+												<a href="#"><img src="assets/albumcovers/gregory_rees.jpeg" alt="Gregory Rees" title="" width="250" height="250"/></a>
+												<div class="caption">
+													<a href="">Gregory Rees</a>
+												</div>
+											</div>
+											<div class="clear"></div>
+
+										</div>
+									</div>
+								</div>
 
 							</div>
 						</section>
@@ -128,24 +154,48 @@
 
 		<script>
 			jQuery(document).ready(function ($) {
+				// Album/Artists panels
+					//move the image in pixel
+					var move = -15;
+
+					//zoom percentage, 1.2 =120%
+					var zoom = 1.2;
+
+					//On mouse over those thumbnail
+					$('.zitem').hover(function() {
+						console.log("alert");
+
+						//Set the width and height according to the zoom percentage
+						width = $('.zitem').width() * zoom;
+						height = $('.zitem').height() * zoom;
+
+						//Display the caption
+						$(this).find('div.caption').stop(false,true).fadeIn(500);
+					},
+					function() {
+						//Hide the caption
+						$(this).find('div.caption').stop(false,true).fadeOut(500);
+					});
+
 				// Menu stickyness
-				var menu = $('.menu');
-				var origOffsetY = menu.offset().top;
+					var menu = $('.menu');
+					var origOffsetY = menu.offset().top;
 
-				function scroll() {
-						if ($(window).scrollTop() >= origOffsetY) {
-								$('.menu').addClass('sticky');
-								$('.content').addClass('menu-padding');
-						} else {
-								$('.menu').removeClass('sticky');
-								$('.content').removeClass('menu-padding');
-						}
-				}
-				document.onscroll = scroll;
+					function scroll() {
+							if ($(window).scrollTop() >= origOffsetY) {
+									$('.menu').addClass('sticky');
+									$('.content').addClass('menu-padding');
+							} else {
+									$('.menu').removeClass('sticky');
+									$('.content').removeClass('menu-padding');
+							}
+					}
+					document.onscroll = scroll;
 
-				$('.panels').panelSnap({
-					$menu: $('.menu')
-				});
+				// Snappy panels
+					$('.panels').panelSnap({
+						$menu: $('.menu')
+					});
 			});
 
 			function scrollToObjectAndShowTab(object, tab) {

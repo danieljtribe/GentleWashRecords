@@ -235,6 +235,7 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 25px;
+	padding-bottom: 15px;
 	height: 65%;
 }
 
@@ -263,13 +264,14 @@ img {
 }
 .social-small li a {
 	display: block;
-	width: 20px;
-	padding: 5px 4px;
-	font-size: 10px;
+	width: 26px;
+	padding: 6px 4px;
+	font-size: 12px;
 	line-height: 1;
 	background: #ffffff;
 	color: #373e45;
 	opacity: 0.6;
+	border: 1px solid #c0c0c0;
 }
 .social-small li a:hover {
   opacity: 1;

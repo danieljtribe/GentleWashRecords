@@ -94,6 +94,10 @@ img {
 	color: #ffffff;
 }
 
+.articles-container {
+	background-color: rgb(250, 250, 250);
+}
+
  /* Phone */
 @media only screen and (min-width: 480px) {
 	.container-image {
@@ -112,6 +116,9 @@ img {
 		margin-right: 0px;
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+	.articles-container {
+		min-height: 130%;
 	}
 }
  /* Tablet */
@@ -132,6 +139,9 @@ img {
 		margin-right: 0px;
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+	.articles-container {
+		min-height: 80%;
 	}
 }
 
@@ -157,7 +167,7 @@ img {
 }
 
 .section-panel {
-	height: 100%;
+	height: 200%;
 	padding-left: 10%;
 	padding-right: 10%;
 	padding-top: 10%;

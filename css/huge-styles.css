@@ -1984,8 +1984,8 @@ article .post-notes blockquote {
   -webkit-box-sizing: content-box;
 }
 #cboxOverlay {
-  background: rgba(15, 15, 15, 0.952941);
-  opacity: 1 !important;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 0.6 !important;
 }
 #colorbox {
   outline: 0;
@@ -2101,4 +2101,3 @@ article .post-notes blockquote {
   -o-transition: none;
   transition: none;
 }
-

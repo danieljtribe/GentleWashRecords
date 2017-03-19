@@ -4,6 +4,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="css/colorbox.css" />
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/text.css" />
 		<link rel="stylesheet" type="text/css" href="css/precrafted.css" />
@@ -11,13 +12,12 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-social.css" />
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
 		<link rel="stylesheet" type="text/css" href="css/cards.css" />
-		<link rel="stylesheet" type="text/css" href="css/lity.css" />
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 		<script src="js/jquery.panelSnap.js"></script>
-		<script src="js/lity.min.js"></script>
+		<script src="js/jquery.colorbox.js"></script>
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
@@ -70,11 +70,6 @@
 								</div>
 							</div>
 						</div>
-					<!--	<div class="menu">
-						 <span><a href="#" id="a-artists" data-panel="artists" onclick="scrollToObjectAndShowTab($('#articles'), 1);">Artists</a></span> |
-						 <span><a href="#" id="a-albums" data-panel="albums" onclick="scrollToObjectAndShowTab($('#articles'), 2);">Albums</a></span> |
-						 <span><a href="#" id="a-demo" data-panel="demopolicy" onclick="scrollToObjectAndShowTab($('#articles'), 3);">Demo Policy</a></span>
-					 </div> -->
 					 <div class="menu">
 						 <a href="" onclick="scrollToObjectAndShowTab($('#articles'), 0);" data-panel="first" class="active">
 							 Albums
@@ -108,7 +103,7 @@
 													<div class="caption">
 													</div>
 													<div class="info">
-														<a href="#album1" data-lity>
+														<a href='#' id='album1'>
 															<img src="assets/info.png" />
 														</a>
 													</div>
@@ -200,12 +195,44 @@
 			<!-- End Social footer -->
 		</section>
 
-		<div id="album1" style="background:#fff" class="lity-hide">
-			Inline content
+		<!-- Lightbox items for Albums -->
+		<div style='display:none'>
+		    <div class='inline'>
+					<div id="album1a" style="background:rgb(232, 233, 236); min-width: 400px; max-width: inherit; height: 400px;">
+						Inline content 1
+					</div>
+		    </div>
+		    <div class='inline'>
+		        <div style='padding:10px; background:#fff;'>
+		            <p><strong>2. This content comes from a hidden element on this page.</strong></p>
+		        </div>
+		    </div>
+		    <div class='inline'>
+		        <div style='padding:10px; background:#fff;'>
+		            <p><strong>3. This content comes from a hidden element on this page.</strong></p>
+		        </div>
+		    </div>
+		    <div class='inline'>
+		        <div style='padding:10px; background:#fff;'>
+		            <p><strong>4. This content comes from a hidden element on this page.</strong></p>
+		        </div>
+		    </div>
 		</div>
 
 		<script>
+			// Lightbox event handlers
+	      var $group = $('.inline').colorbox({inline:true, rel:'inline', href: function(){
+	            return $(this).children();
+	      }});
+	      $('#album1').on('click', function(e){
+	            e.preventDefault();
+	            $group.eq(0).click();
+	      });
+
 			jQuery(document).ready(function ($) {
+				// Inline Lightbox
+					$(".inline").colorbox({rel:'group1', inline:true, href:$(this).attr('href')});
+
 				// Album/Artists panels
 					// Zoom percentage, 1.2 =120%
 					var zoom = 1.2;

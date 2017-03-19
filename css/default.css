@@ -163,8 +163,6 @@ img {
 	padding-top: 10%;
 }
 
-.ftg-social {
-	color: #000000;
-	height: 40px;
-	text-align: right;
+#cboxOverlay {
+	background-color: #ffffff;
 }

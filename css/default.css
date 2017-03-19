@@ -189,6 +189,7 @@ img {
 
 .lightbox-container {
 	background:rgb(232, 233, 236);
+	overflow: hidden;
 }
 
 .lightbox-column {

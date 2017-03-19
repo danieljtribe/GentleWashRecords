@@ -196,26 +196,25 @@
 		</section>
 
 		<!-- Lightbox items for Albums -->
-		<div style='display:none'>
+		<div style='display:none;'>
 		    <div class='inline'>
-					<div id="album1a" style="background:rgb(232, 233, 236); min-width: 400px; max-width: inherit; height: 400px;">
-						Inline content 1
+					<div id="album1a" style="z-index: 50; min-width: 400px; max-width: inherit; height: 450px;">
+						<div class="container-fluid lightbox-container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 lightbox-column">
+									<h3>Album Title</h3>
+										<img src="assets/albumcovers/album1.png" />
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 lightbox-column">
+									<h3>Listen</h3>
+									<iframe src="https://embed.spotify.com/?uri=spotify:album:6ezmJo8RpXfyJQNeT40kaJ&theme=white&view=coverart" width="300" height="75%" frameborder="0" allowtransparency="true"></iframe>
+								</div>
+							</div>
+						</div>
 					</div>
 		    </div>
 		    <div class='inline'>
-		        <div style='padding:10px; background:#fff;'>
-		            <p><strong>2. This content comes from a hidden element on this page.</strong></p>
-		        </div>
-		    </div>
-		    <div class='inline'>
-		        <div style='padding:10px; background:#fff;'>
-		            <p><strong>3. This content comes from a hidden element on this page.</strong></p>
-		        </div>
-		    </div>
-		    <div class='inline'>
-		        <div style='padding:10px; background:#fff;'>
-		            <p><strong>4. This content comes from a hidden element on this page.</strong></p>
-		        </div>
+		        <!-- More content can go here -->
 		    </div>
 		</div>
 

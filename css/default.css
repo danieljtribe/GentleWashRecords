@@ -166,3 +166,25 @@ img {
 #cboxOverlay {
 	background-color: #ffffff;
 }
+
+.lightbox-container {
+	background:rgb(232, 233, 236);
+}
+
+.lightbox-column {
+	text-align: center;
+	padding: 15px;
+	height: 100%;
+}
+
+.lightbox-column img {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 25px;
+}
+
+.lightbox-column iframe {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 25px;
+}

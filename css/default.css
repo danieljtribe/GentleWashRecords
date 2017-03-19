@@ -203,3 +203,54 @@ img {
 	margin-right: auto;
 	padding-top: 25px;
 }
+
+.social-footer {
+  position: relative;
+  width: 100%;
+  list-style: none;
+}
+.social-footer.circle li a {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+}
+.social-footer li {
+  margin-top: 10px;
+  display: inline-block;
+  width: 44px;
+  padding: 0 2px;
+}
+.social-footer li a {
+  display: block;
+  width: 40px;
+  padding: 13px 10px;
+  font-size: 14px;
+  line-height: 1;
+  background: #ffffff;
+  color: #373e45;
+  opacity: 0.6;
+}
+.social-footer li a:hover {
+  opacity: 1;
+}
+.social-footer li a .social-ebay {
+  margin-left: -6px;
+}
+.social-footer li a .social-gmail {
+  margin-left: -3px;
+  font-size: 13px;
+}
+.social-footer li a .social-vimeo {
+  margin-left: -3px;
+}
+.social-footer li a .social-tweets,
+.social-footer li a .social-weibo {
+  margin-left: -1px;
+}
+.social-footer li a .social-medium {
+  margin-left: -2px;
+}
+.social-footer li a .social-vimeo {
+  font-size: 13px;
+}

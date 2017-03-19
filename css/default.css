@@ -120,6 +120,11 @@ img {
 	.articles-container {
 		min-height: 130%;
 	}
+
+	.social-footer-span {
+		float: center;
+		margin-top: 0px;
+	}
 }
  /* Tablet */
 @media only screen and (min-width: 768px) {
@@ -142,6 +147,11 @@ img {
 	}
 	.articles-container {
 		min-height: 80%;
+	}
+
+	.social-footer-span {
+		float: right;
+		margin-top: -20px;
 	}
 }
 

@@ -125,6 +125,20 @@ img {
 		float: center;
 		margin-top: 0px;
 	}
+
+	.social-footer li a {
+	  display: block;
+	  width: 40px;
+	  padding: 13px 10px;
+	  font-size: 14px;
+	  line-height: 1;
+	  background: #ffffff;
+	  color: #373e45;
+	  opacity: 0.6;
+	}
+	.social-footer.circle li a span {
+
+	}
 }
  /* Tablet */
 @media only screen and (min-width: 768px) {
@@ -153,6 +167,21 @@ img {
 		float: right;
 		margin-top: -20px;
 	}
+
+.social-footer li a {
+  display: block;
+  width: 40px;
+  padding: 20px 10px;
+  font-size: 14px;
+  line-height: 1;
+  background: #ffffff;
+  color: #373e45;
+  opacity: 0.6;
+}
+.social-footer.circle li a span {
+  margin-top: -7px;
+	padding-left: 3px;
+}
 }
 
 
@@ -215,6 +244,57 @@ img {
 	padding-top: 25px;
 }
 
+.social-small {
+  position: relative;
+  width: 100%;
+  list-style: none;
+}
+.social-small.circle li a {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+}
+.social-small li {
+  margin-top: 10px;
+  display: inline-block;
+  width: 30px;
+  padding: 0 2px;
+}
+.social-small li a {
+	display: block;
+	width: 20px;
+	padding: 5px 4px;
+	font-size: 10px;
+	line-height: 1;
+	background: #ffffff;
+	color: #373e45;
+	opacity: 0.6;
+}
+.social-small li a:hover {
+  opacity: 1;
+}
+.social-small li a .social-ebay {
+  margin-left: -6px;
+}
+.social-small li a .social-gmail {
+  margin-left: -3px;
+  font-size: 13px;
+}
+.social-small li a .social-vimeo {
+  margin-left: -3px;
+}
+.social-small li a .social-tweets,
+.social-small li a .social-weibo {
+  margin-left: -1px;
+}
+.social-small li a .social-medium {
+  margin-left: -2px;
+}
+.social-small li a .social-vimeo {
+  font-size: 13px;
+}
+
 .social-footer {
   position: relative;
   width: 100%;
@@ -231,16 +311,6 @@ img {
   display: inline-block;
   width: 44px;
   padding: 0 2px;
-}
-.social-footer li a {
-  display: block;
-  width: 40px;
-  padding: 13px 10px;
-  font-size: 14px;
-  line-height: 1;
-  background: #ffffff;
-  color: #373e45;
-  opacity: 0.6;
 }
 .social-footer li a:hover {
   opacity: 1;

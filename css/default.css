@@ -235,8 +235,8 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 25px;
-	padding-bottom: 15px;
-	height: 65%;
+	padding-bottom: 8px;
+	width: 75%;
 }
 
 .lightbox-column iframe {
@@ -336,4 +336,13 @@ img {
 }
 .social-footer li a .social-vimeo {
   font-size: 13px;
+}
+
+.article-container {
+	z-index: 50;
+	min-width: 400px;
+	max-width: 850px;
+	height: 450px;
+	margin-left: auto;
+	margin-right: auto;
 }

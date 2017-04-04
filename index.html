@@ -48,6 +48,10 @@
 			.articles {
 				background-color: #c0c0c0;
 			}
+
+			#articles {
+				height: 90%;
+			}
     </style>
 	</head>
 	<body>
@@ -187,11 +191,11 @@
 			</div>
 		</section>
 		<!-- Begin Social footer -->
-		<footer class="footer" style="background-color: rgb(250, 250, 250);">
+		<footer class="footer" style="height: 10%; background-color: rgb(250, 250, 250);">
 			<a href="#top" onclick="scrollToObjectAndShowTab($('#top'), 0);" class="scroll-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 
 			<span>All rights reserved</span>
-			<span>&copy; Gentle Wash Records 2014-2017</span>
+			<span>&copy; Gentle Wash Records 2014-<script>document.write(new Date().getFullYear())</script></span>
 			<span class="social-footer-span">
 				<ul class="social-footer circle">
 					<li><a href="http://twitter.com/gentlewashrec" target="_blank" title="Twitter"><span class="fa fa-twitter"></span></a></li>

@@ -98,6 +98,10 @@ img {
 	background-color: rgb(250, 250, 250);
 }
 
+.articles {
+	height: 80%;
+}
+
  /* Phone */
 @media only screen and (min-width: 480px) {
 	.container-image {
@@ -209,7 +213,7 @@ img {
 	height: 200%;
 	padding-left: 10%;
 	padding-right: 10%;
-	padding-top: 10%;
+	padding-top: 5%;
 }
 
 #cboxOverlay {
